@@ -14,11 +14,11 @@ void printMenu(){
 /* todo
  *
  */
-cout << "m:move";
-cout << "p:print board";
-cout << "r:restart";
-cout << "q:quit";
-
+cout << "m:move" << endl;
+cout << "p:print board" << endl;
+cout << "r:restart" << endl;
+cout << "q:quit" << endl;
+cout << "h:help (this text)" << endl;
 }
 
 
@@ -28,7 +28,7 @@ int main(int argc, char** argv)
 	printGrid();
 	clearGrid();
 	printMenu();
-	cout << "Player 1>";
+	cout << ">";
 	char input = 0;
 	bool quit = 0;
 	int row = 0, col = 0;
@@ -53,20 +53,15 @@ int main(int argc, char** argv)
 		  quit = 1;
 		  break;
 
+		case 'h':
+		  printMenu();
+		  break;
 		default:
-		  cout << "what you say?";
+		  cout << "Invaid input";
 		  break;
 		}
 		input = 0;
 		cout << endl;
-		if( player == PLAYER1){
-			cout << "Player 1";
-		} else if(player == PLAYER2){
-			cout << "Player 2";
-		} else {
-		cout << "I've got a snake in my boot!";
-		return -1;
-		}
 		cout << ">";
 	}
 	editGrid(0,0,PLAYER1);
@@ -79,5 +74,6 @@ int main(int argc, char** argv)
 	if(winnerTestCol(0,2))
 	  cout << "player 2 wins!" << endl;
 	printGrid();
+	cout << "bye" << endl;
 	return 0;
 }
