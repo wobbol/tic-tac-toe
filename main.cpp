@@ -1,15 +1,13 @@
 #include <iostream>
-
+#include "winner.h"
+#include "grid.h"
 using namespace std;
 
-int NUMCOL 3
-int NUMROW 3
 
 #define PLAYER1 1
 #define PLAYER2	2
 
 
-int grid[NUMROW][NUMCOL];
 
 void printGrid(){
 int i,j;
@@ -42,7 +40,6 @@ int i,j;
 }
 
 
-}
 void printMenu(){
 
 /* todo
