@@ -45,6 +45,10 @@ void printMenu(){
 /* todo
  *
  */
+cout << "m:move";
+cout << "p:print board";
+cout << "r:restart";
+cout << "q:quit";
 
 }
 
@@ -58,11 +62,32 @@ int main(int argc, char** argv)
 	cout << "Menu>";
 	char input = 0;
 	bool quit = 0;
+	int row = 0, col = 0;
+	int player;
 	while(!quit){
 		cin >> input;
 		switch(input){
+		
 		case 'm':
-		  cout << "moves?";
+		  cout << "row?:";
+		  cin >> row;
+		  row = 0;
+		  cout << "colum?:";
+		  cin >> col;
+		  col = 0;
+		  cout << "player?:";		//TODO: fix this shit mang
+		  cin >> player;		//TODO: like really this is asking frou trouble
+		  editGrid(row,col,player);
+		  printGrid();
+		  break;
+
+		case 'p':
+		  printGrid();
+		  break;
+
+		case 'r':
+		  clearGrid();
+		  printGrid();
 		  break;
 
 		case 'q':
