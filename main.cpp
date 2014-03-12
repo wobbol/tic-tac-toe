@@ -1,13 +1,15 @@
 #include <iostream>
+
 using namespace std;
+
 #define NUMCOL 3
 #define NUMROW 3
 
 #define PLAYER1 1
 #define PLAYER2	2
 
-int grid[NUMROW][NUMCOL] = {1,2,3,4,5,6,7,8,9};
 
+int grid[NUMROW][NUMCOL];
 
 void printGrid(){
 int i,j;
@@ -95,13 +97,43 @@ return 0;
 
 
 }
+void printMenu(){
 
+/* todo
+ *
+ */
+
+}
 
 
 int main(int argc, char** argv)
 {
+
 	printGrid();
 	clearGrid();
+	printMenu();
+	cout << "Menu>";
+	char input = 0;
+	bool quit = 0;
+	while(!quit){
+		cin >> input;
+		switch(input){
+		case 'm':
+		  cout << "moves?";
+		  break;
+
+		case 'q':
+		  quit = 1;
+		  break;
+
+		default:
+		  cout << "what you say?";
+		  break;
+		}
+		input = 0;
+		cout << endl;
+		cout << "Menu>";
+	}
 	editGrid(0,1,PLAYER1);
 	editGrid(0,2,PLAYER2);
 	editGrid(1,1,PLAYER2);
