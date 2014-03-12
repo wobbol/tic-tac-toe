@@ -59,25 +59,29 @@ int main(int argc, char** argv)
 	printGrid();
 	clearGrid();
 	printMenu();
-	cout << "Menu>";
+	cout << "Player 1>";
 	char input = 0;
 	bool quit = 0;
 	int row = 0, col = 0;
-	int player;
+	int player = PLAYER1;
 	while(!quit){
 		cin >> input;
 		switch(input){
 		
 		case 'm':
 		  cout << "row?:";
-		  cin >> row;
+		  cin >> ++row;
 		  row = 0;
 		  cout << "colum?:";
-		  cin >> col;
+		  cin >> ++col;
 		  col = 0;
-		  cout << "player?:";		//TODO: fix this shit mang
-		  cin >> player;		//TODO: like really this is asking frou trouble
+		  		//TODO: like really this is asking frou trouble
 		  editGrid(row,col,player);
+		  if(player == PLAYER1){
+		  player = PLAYER2;
+		  } else{
+		  player = PLAYER1;
+		  }
 		  printGrid();
 		  break;
 
@@ -100,7 +104,15 @@ int main(int argc, char** argv)
 		}
 		input = 0;
 		cout << endl;
-		cout << "Menu>";
+		if( player == PLAYER1){
+			cout << "Player 1";
+		} else if(player == PLAYER2){
+			cout << "Player 2";
+		} else {
+		cout << "I've got a snake in my boot!";
+		return -1;
+		}
+		cout << ">";
 	}
 	editGrid(0,1,PLAYER1);
 	editGrid(0,2,PLAYER2);
