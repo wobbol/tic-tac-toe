@@ -25,12 +25,12 @@ int i;
 	}
 }
 
-bool winnerTestDiagUp(int player){
-int i,j;
-	for(i = 0,j = 0; i < NUMROW; i++,j++){
-		if(grid[i][j] != player){
-			return 0;
-		}
+bool winnerTestDiagUp(int player){ // best way to make this not edge alligned
+int i,j;				//would be accessing the grid as a
+for(i = 0,j = 0; i < NUMROW; i++,j++){ //1 dimentional array and using an offset
+	if(grid[i][j] != player){//with a multiple reliant of the size of the grid
+	return 0;
+	}
 	}
 return 1;
 }
