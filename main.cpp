@@ -33,11 +33,12 @@ int main(int argc, char** argv)
 	bool quit = 0;
 	int row = 0, col = 0;
 	int player = PLAYER1;
+	int result = 0;
 	while(!quit){
 		cin >> input;
 		switch(input){
 		case 'm':
-		  game();
+		  result = game();
 		  break;
 
 		case 'p':
@@ -60,20 +61,19 @@ int main(int argc, char** argv)
 		  cout << "Invaid input";
 		  break;
 		}
+		if( result == 1 ) {
+			cout << "player 1 wins!" << endl;
+		}
+		if(result == 2 ) {
+			cout << "player 2 wins!" << endl;
+		}
+		if( result == 0 ) {
+			cout << "no one wins" << endl;
+		}
 		input = 0;
 		cout << endl;
 		cout << ">";
 	}
-	editGrid(0,0,PLAYER1);
-	editGrid(1,0,PLAYER1);
-	editGrid(2,0,PLAYER1);
-	editGrid(1,1,PLAYER2);
-  	editGrid(2,2,PLAYER2);
-//	editGrid(1,1,PLAYER2);
-//	editGrid(2,2,PLAYER2);
-	if(winnerTestCol(0,2))
-	  cout << "player 2 wins!" << endl;
-	printGrid();
 	cout << "bye" << endl;
 	return 0;
 }
