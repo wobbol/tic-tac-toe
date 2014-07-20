@@ -8,4 +8,5 @@ extern int grid[NUMROW][NUMCOL];
 void printGrid();
 int editGrid(int i, int j, int player);
 void clearGrid();
+int movePlayer( int i, int j, int player );
 #endif
