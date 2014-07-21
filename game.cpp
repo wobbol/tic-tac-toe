@@ -19,7 +19,7 @@ int col;
 			goto player1;
 		}
 		printGrid();
-		if(!winnerTest(1)){
+		if(winnerTest(1)){
 		  return 1;
 		}
 	player2:
@@ -30,12 +30,12 @@ int col;
 		cout << "colum:";
 		cin >> col;
 		cout << endl;
-		if( !movePlayer( row, col, 2 ) ) {
+		if( movePlayer( row, col, 2 ) ) {
 			cout << "make a valid move" << endl;
 			goto player2;
 		}
 		printGrid();
-		if(!winnerTest(2)){
+		if(winnerTest(2)){
 		  return 2;
 		}
 
