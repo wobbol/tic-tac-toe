@@ -2,6 +2,9 @@
 #include "winner.h"
 #include "grid.h"
 #include "game.h"
+#include "return.h"
+
+
 using namespace std;
 
 
@@ -30,11 +33,11 @@ int main(int argc, char** argv)
 	printMenu();
 	cout << ">";
 	char input = 0;
-	bool quit = 0;
-	int row = 0, col = 0;
+	int quit = quit_no;
+
 	int player = PLAYER1;
 	int result = 0;
-	while(!quit){
+	while(quit == quit_no){
 		cin >> input;
 		switch(input){
 		case 'm':
@@ -51,7 +54,7 @@ int main(int argc, char** argv)
 		  break;
 
 		case 'q':
-		  quit = 1;
+		  quit = quit_yes;
 		  break;
 
 		case 'h':
@@ -61,19 +64,23 @@ int main(int argc, char** argv)
 		  cout << "Invaid input";
 		  break;
 		}
-		if( result == 1 ) {
+		if( result == player_one ) {
 			cout << "player 1 wins!" << endl;
+			printMenu();
 		}
-		if(result == 2 ) {
+		if(result == player_two ) {
 			cout << "player 2 wins!" << endl;
+			printMenu();
 		}
-		if( result == 0 ) {
+		if( result == player_null ) {
 			cout << "no one wins" << endl;
+			printMenu();
 		}
 		input = 0;
 		cout << endl;
 		cout << ">";
 	}
-	cout << "bye" << endl;
+	
+	cout << "bye"  << endl;
 	return 0;
 }

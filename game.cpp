@@ -1,10 +1,13 @@
 #include <iostream>
 #include "grid.h"
 #include "winner.h"
+#include "return.h"
+
 using namespace std;
 int game(){
-int row;
-int col;
+int row = 0;
+int col = 0;
+int move =  0;
 	while(1){
 	player1:
 		cout << "Player1>" << endl;
@@ -20,7 +23,7 @@ int col;
 		}
 		printGrid();
 		if(winnerTest(1)){
-		  return 1;
+		  return player_one;
 		}
 	player2:
 		cout << "Player2>" << endl;
@@ -36,9 +39,9 @@ int col;
 		}
 		printGrid();
 		if(winnerTest(2)){
-		  return 2;
+		  return player_two;
 		}
 
 	}
-return 0;
+return error_how_are_you_here;
 }
