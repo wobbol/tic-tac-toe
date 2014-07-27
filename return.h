@@ -8,4 +8,4 @@ quit_yes,
 quit_no,
 ingame_yes,
 ingame_no
-}ReturnCodes;
+};
