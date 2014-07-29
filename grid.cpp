@@ -21,6 +21,19 @@ int editGrid( int i, int j, int player ) { //ROW,COLLUM
 	return 0;
 }
 
+void isGridFull() {
+	int i, j;
+	for( i = 0; i < NUMROW; i++ ) {
+
+		for( j = 0; j < NUMCOL; j++ ) {
+			if( grid[i][j] == player_null)
+				return 0;
+		}
+	}
+	return 1;
+}
+
+
 int movePlayer( int i, int j, int player ) {
 	if( grid[i][j] != 0) {
 		cout << " this space is full" << endl;

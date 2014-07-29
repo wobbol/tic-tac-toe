@@ -9,4 +9,5 @@ void printGrid();
 int editGrid(int i, int j, int player);
 void clearGrid();
 int movePlayer( int i, int j, int player );
+bool isGridFull();
 #endif
