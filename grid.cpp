@@ -1,15 +1,17 @@
 #include <iostream>
 #include "grid.h"
+#include "return.h"
 
 using namespace std;
 int grid[NUMROW][NUMCOL];
 
 void printGrid() {
 int i, j;
+cout << "X 0 1 2" << endl;
 	for( i = 0; i < NUMROW; i++ ) {
-
+		cout << i << " ";
 		for( j = 0; j < NUMCOL; j++ ) {
-		cout << grid[i][j] << " ";
+			cout << grid[i][j] << " ";
 		}
 		cout << endl;
 	}
@@ -21,7 +23,7 @@ int editGrid( int i, int j, int player ) { //ROW,COLLUM
 	return 0;
 }
 
-void isGridFull() {
+bool isGridFull() {
 	int i, j;
 	for( i = 0; i < NUMROW; i++ ) {
 
