@@ -8,9 +8,6 @@
 using namespace std;
 
 
-#define PLAYER1 1
-#define PLAYER2	2
-
 
 void printMenu(){
 
@@ -35,8 +32,8 @@ int main(int argc, char** argv)
 	char input = 0;
 	int quit = quit_no;
 
-	int player = PLAYER1;
-	int result = 0;
+	int player = player_one;
+	int result = player_null;
 	while(quit == quit_no){
 		cin >> input;
 		switch(input){

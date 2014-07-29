@@ -17,7 +17,7 @@ int move =  0;
 		cout << "colum:";
 		cin >> col;
 		cout << endl;
-		if( movePlayer( row, col, 1 ) ) {
+		if( movePlayer( row, col, player_one ) ) {
 			cout << "make a valid move" << endl;
 			goto player1;
 		}
@@ -33,7 +33,7 @@ int move =  0;
 		cout << "colum:";
 		cin >> col;
 		cout << endl;
-		if( movePlayer( row, col, 2 ) ) {
+		if( movePlayer( row, col, player_two ) ) {
 			cout << "make a valid move" << endl;
 			goto player2;
 		}
