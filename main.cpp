@@ -3,6 +3,7 @@
 #include "grid.h"
 #include "game.h"
 #include "return.h"
+#include "player.h"
 
 
 using namespace std;
@@ -14,7 +15,7 @@ void printMenu(){
 /* todo
  *
  */
-cout << "m:move" << endl;
+std::cout << "m:move" << endl;
 cout << "p:print board" << endl;
 cout << "r:restart" << endl;
 cout << "q:quit" << endl;
