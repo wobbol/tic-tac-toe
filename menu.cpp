@@ -1,6 +1,7 @@
 /*
 Unified menu function 
-
+slated to replace all input functions to the program
+to provide a consistinstant interface with the user
 
 
 */
@@ -9,10 +10,39 @@ Unified menu function
 
 #include <iostream>
 #include "return.h"
+#include "grid.h"
+#include "game.h"
+
+using namespace std;
+
+void printMenu(){
+
+/* todo
+ *
+ */
+std::cout << "m:move" << endl;
+cout << "p:print board" << endl;
+cout << "r:restart" << endl;
+cout << "q:quit" << endl;
+cout << "h:help (this text)" << endl;
+}
+
+void printMenu(enum eReturnCodes ingame){
+
+/* todo
+ *
+ */
+std::cout << "m:move" << endl;
+cout << "p:print board" << endl;
+cout << "r:restart" << endl;
+cout << "q:quit" << endl;
+cout << "h:help (this text)" << endl;
+}
+
 
 
 int getChoice(char input,enum eReturnCodes ingame){
-	quit = quit_no;
+	int quit = quit_no;
 	if( !ingame ) {
 		int result = player_null;
 
@@ -51,9 +81,13 @@ int getChoice(char input,enum eReturnCodes ingame){
 			  case 'h':
 			    printMenu(ingame_yes);
 			    break;
-
+			  
 			  default:
-			    cout << "Invaid input";
+			    if( input >= 0 and input <= 2) {
+			  	return input;
+			    } else {
+			    	cout << "Invaid input";
+			    }
 			    break;
 			}
 	}

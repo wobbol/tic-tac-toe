@@ -4,23 +4,13 @@
 #include "game.h"
 #include "return.h"
 #include "player.h"
-
+#include "menu.h"
 
 using namespace std;
 
 
 
-void printMenu(){
 
-/* todo
- *
- */
-std::cout << "m:move" << endl;
-cout << "p:print board" << endl;
-cout << "r:restart" << endl;
-cout << "q:quit" << endl;
-cout << "h:help (this text)" << endl;
-}
 
 
 int main(int argc, char** argv)
