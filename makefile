@@ -19,3 +19,5 @@ player.o: player.cpp
 	g++ -c player.cpp
 menu.o: menu.cpp
 	g++ -c menu.cpp
+clean:
+	rm *.o
