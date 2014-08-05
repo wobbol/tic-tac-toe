@@ -83,13 +83,11 @@ int getChoice(char input,enum eReturnCodes ingame){
 			    break;
 			  
 			  default:
-			    if( input >= 0 and input <= 2) {
-			  	return input;
-			    } else {
-			    	cout << "Invaid input";
-			    }
+			    cout << "Invaid input";
 			    break;
 			}
+		return 0; 	//this is what the ingame part
+				//of the function returns
 	}
 	return quit;
 }
