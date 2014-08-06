@@ -38,7 +38,7 @@ bool isGridFull() {
 
 int movePlayer( int i, int j, int player ) {
 	if( grid[i][j] != 0) {
-		cout << " this space is full" << endl;
+		cout << "space " << i << " " << j <<" is full" << endl;
 		return 1;
 	} else {
 		editGrid( i, j, player );

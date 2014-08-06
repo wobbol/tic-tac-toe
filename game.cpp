@@ -40,9 +40,17 @@ int move =  0;
 		cout << "Player2>" << endl;
 		cout << "row:";
 		cin >> row;
+		if( !(row >= 0 && row <= 2) ){
+			getChoice((char)row,ingame_yes);
+			goto player2;
+		}
 		cout << endl;
 		cout << "colum:";
 		cin >> col;
+		if( !(row >= 0 && row <= 2) ){
+			getChoice((char)row,ingame_yes);
+			goto player2;
+		}
 		cout << endl;
 		if( movePlayer( row, col, player_two ) ) {
 			cout << "make a valid move" << endl;
