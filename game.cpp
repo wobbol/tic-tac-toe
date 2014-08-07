@@ -14,7 +14,7 @@ char* move;
 		cout << "Player1>" << endl;
 	player1row:
 		cout << "row:";
-		cin >> move;
+		cin >> *move;
 		cout << endl; 
 		row = menuInGame(move);
 
@@ -23,7 +23,7 @@ char* move;
 
 	player1col:	
 		cout << "Colum:";
-		cin >> move;
+		cin >> *move;
 		cout << endl;
 		col = menuInGame(move);
 
@@ -44,17 +44,17 @@ char* move;
 		cout << "Player2>" << endl;
 		cout << "row:";
 		cin >> row;
-		if( !(row >= 0 && row <= 2) ){
-			getChoice((char)row,ingame_yes);
-			goto player2;
-		}
+//		if( !(row >= 0 && row <= 2) ){
+//			getChoice((char)row,ingame_yes);
+//			goto player2;
+//		}
 		cout << endl;
 		cout << "colum:";
 		cin >> col;
-		if( !(row >= 0 && row <= 2) ){
-			getChoice((char)row,ingame_yes);
-			goto player2;
-		}
+//		if( !(row >= 0 && row <= 2) ){
+//			getChoice((char)row,ingame_yes);
+//			goto player2;
+//		}
 		cout << endl;
 		if( movePlayer( row, col, player_two ) ) {
 			cout << "make a valid move" << endl;
