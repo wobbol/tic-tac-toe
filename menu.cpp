@@ -7,7 +7,8 @@ to provide a consistinstant interface with the user
 */
 
 
-
+#include <stdlib.h>
+#include <stdio.h>
 #include <iostream>
 #include "return.h"
 #include "grid.h"
@@ -40,54 +41,54 @@ cout << "h:help (this text)" << endl;
 }
 
 
+//menuInGame  function ment to return -1 when 
+//it does its job and return the char as an int otherwise
+//
 
-int getChoice(char input,enum eReturnCodes ingame){
+int menuInGame(char *input){
 	int quit = quit_no;
-	if( !ingame ) {
-		int result = player_null;
-
-			switch(input){
-			  case 'm':
-			    result = game();
-			    return result;
-			    break;
-	
-			  case 'q':
-			    quit = quit_yes;
-			    break;
-	
-			  case 'h':
-			    printMenu(ingame_no);
-			    break;
-			  default:
-			    cout << "Invaid input";
-			    break;
-			}
-	} else {
-			switch(input){
+			switch(*input){
 			  case 'p':
 			    printGrid();
+			    return -1;
 			    break;
 
-//			  case 'r':
-//			    clearGrid();
-///			    printGrid();
-//			    break;
+			  case 'h':
+			    printMenu(ingame_yes);
+			    return -1;
+			    break;
 
 			  case 'q':
 			    quit = quit_yes;
 			    break;
-	
-			  case 'h':
-			    printMenu(ingame_yes);
-			    break;
-			  
+
 			  default:
-			    cout << "Invaid input";
+			    return atoi(input);
+
 			    break;
 			}
-		return 0; 	//this is what the ingame part
+	return 0; 	//this is what the ingame part
 				//of the function returns
 	}
-	return quit;
+
+int menuOutGame(char input){
+	int quit = quit_no;
+	int result = player_null;
+		switch(input){
+		  case 'm':
+		    result = game();
+		    return result;
+		    break;
+
+		  case 'q':
+		    quit = quit_yes;
+		    break;
+
+		  case 'h':
+		    printMenu(ingame_no);
+		    break;
+		  default:
+		    cout << "Invaid input";
+		    break;
+		}
 }

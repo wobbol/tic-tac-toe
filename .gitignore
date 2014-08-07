@@ -2,6 +2,6 @@
 *.swp
 tags
 *.note
-mofunny
+mofunny*
 *.sublime-project
 *.sublime-workspace

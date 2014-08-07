@@ -1,6 +1,7 @@
 #ifndef MENU_H
 #define MENU_H
-int getChoice(char input,enum eReturnCodes ingame);
+int menuInGame(char *input);
+int menuOutGame(char input);
 void printMenu(enum eReturnCodes ingame);
 void printMenu();
 

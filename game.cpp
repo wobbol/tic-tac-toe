@@ -8,24 +8,28 @@ using namespace std;
 int game(){
 int row = 0;
 int col = 0;
-int move =  0;
+char* move;
 	while(1){
 	player1:
 		cout << "Player1>" << endl;
+	player1row:
 		cout << "row:";
-		cin >> row; 
-		if( !(row >= 0 && row <= 2) ){
-			getChoice((char)row,ingame_yes);
-			goto player1;
-		}
-		cout << endl;
+		cin >> move;
+		cout << endl; 
+		row = menuInGame(move);
+
+		if( row == -1)
+			goto player1row;
+
+	player1col:	
 		cout << "Colum:";
-		cin >> col;
-		if( !(col >= 0 && col <= 2) ){
-			getChoice((char)col,ingame_yes);
-			goto player1;
-		}
+		cin >> move;
 		cout << endl;
+		col = menuInGame(move);
+
+		if(col == -1)
+			goto player1col;
+
 		if( movePlayer( row, col, player_one ) ) {
 			cout << "Make a valid move, please." << endl;
 			goto player1;
