@@ -4,7 +4,7 @@
  * on a `grid' object of arburtrary size
  */
 #include <iostream>
-#include "grid.h"
+#include "../header/grid.h"
 
 bool testCol(int col,int player ){ //on 'player' not having a win in col returns 1
 int i;

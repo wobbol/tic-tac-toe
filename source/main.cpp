@@ -1,10 +1,10 @@
 #include <iostream>
-#include "winner.h"
-#include "grid.h"
-#include "game.h"
-#include "return.h"
-#include "player.h"
-#include "menu.h"
+#include "../header/winner.h"
+#include "../header/grid.h"
+#include "../header/game.h"
+#include "../header/return.h"
+#include "../header/player.h"
+#include "../header/menu.h"
 
 using namespace std;
 

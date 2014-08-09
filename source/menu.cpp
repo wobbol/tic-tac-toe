@@ -10,9 +10,9 @@ to provide a consistinstant interface with the user
 #include <stdlib.h>
 #include <stdio.h>
 #include <iostream>
-#include "return.h"
-#include "grid.h"
-#include "game.h"
+#include "../header/return.h"
+#include "../header/grid.h"
+#include "../header/game.h"
 
 using namespace std;
 

@@ -1,8 +1,8 @@
 #include <iostream>
-#include "grid.h"
-#include "winner.h"
-#include "return.h"
-#include "menu.h"
+#include "../header/grid.h"
+#include "../header/winner.h"
+#include "../header/return.h"
+#include "../header/menu.h"
 
 using namespace std;
 int game(){

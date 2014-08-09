@@ -1,6 +1,6 @@
 #include <iostream>
-#include "grid.h"
-#include "return.h"
+#include "../header/grid.h"
+#include "../header/return.h"
 
 using namespace std;
 int grid[NUMROW][NUMCOL];
@@ -56,6 +56,5 @@ void clearGrid() {
 		}
 	}
 }
-
 
 
